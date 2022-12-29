@@ -25,17 +25,20 @@
             <li>If you answer a question incorrectly, you will lose 10 seconds.</li>
         </ul>
         <button id="start-button">Start Quiz</button>
-        <button id="scores-button">Scores</button>
+        <button id="scores-button">View Scores</button>
     </div>
 
     <div id="question-content" class="hidden">
         <h3 id="question"></h3>
-        <ol>
+        <ol id="choices">
             <li id="choice-a"></li>
             <li id="choice-b"></li>
             <li id="choice-c"></li>
             <li id="choice-d"></li>
         </ol>
+        <p id="correct" class="hidden">Correct!</p>
+        <p id="incorrect" class="hidden">Incorrect!</p>
+        <button id="next-button" class="hidden">Next Question</button>
     </div>
 
     <div id="scores-content" class="hidden">
