@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biology Quiz</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <a>Home</a>
+        <div>
+            Time: 
+        </div>
+    </header>
+
+    <div id="intro-content" class="visible">
+        <h2>Biology Quiz</h2>
+        <h3>Directions</h3>
+        <ul>
+            <li>Choose the best answer for each question.</li>
+            <li>You have 60 seconds to answer 10 questions.</li>
+            <li>If you answer a question incorrectly, you will lose 10 seconds.</li>
+        </ul>
+        <button id="start-button">Start Quiz</button>
+        <button id="scores-button">Scores</button>
+    </div>
+
+    <div id="question-content" class="hidden">
+        <h3 id="question"></h3>
+        <ol>
+            <li id="choice-a"></li>
+            <li id="choice-b"></li>
+            <li id="choice-c"></li>
+            <li id="choice-d"></li>
+        </ol>
+    </div>
+
+    <div id="scores-content" class="hidden">
+
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

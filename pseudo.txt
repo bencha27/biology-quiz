@@ -1,0 +1,20 @@
+Create homepage layout
+    Heading & instructions
+    Start button
+    High Scores button
+Create quiz question layout
+    Render question with choices
+    Event listeners for choices
+    Validate response
+    Next question button
+    Render next question
+Create quiz end layout
+    Score and name input form
+    Calculate and display score
+    Store name and score in localStorage
+Create timer function
+    Set timer
+    End quiz when timer ends
+    *Pause timer between questions?
+Create high scores layout
+    Render name and score from localStorage
