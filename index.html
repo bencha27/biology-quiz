@@ -10,18 +10,15 @@
 
 <body>
     <header>
-        <a>Home</a>
-        <div>
-            Time: 
-        </div>
+        <h1>Biology Quiz</h1>
+        <button id="home-button" class="hidden">Home</button>
     </header>
 
-    <div id="intro-content" class="visible">
-        <h2>Biology Quiz</h2>
-        <h3>Directions</h3>
+    <div id="intro-content">
+        <h2>Directions</h2>
         <ul>
             <li>Choose the best answer for each question.</li>
-            <li>You have 60 seconds to answer 10 questions.</li>
+            <li>You have 90 seconds to answer 10 questions.</li>
             <li>If you answer a question incorrectly, you will lose 10 seconds.</li>
         </ul>
         <button id="start-button">Start Quiz</button>
@@ -31,19 +28,32 @@
     <div id="question-content" class="hidden">
         <h2 id="question-number"></h2>
         <h3 id="question"></h3>
-        <ol id="choices">
+        <ul id="choices">
             <li id="choice-a"></li>
             <li id="choice-b"></li>
             <li id="choice-c"></li>
             <li id="choice-d"></li>
-        </ol>
+        </ul>
         <p id="correct" class="hidden">Correct!</p>
         <p id="incorrect" class="hidden">Incorrect!</p>
         <button id="next-button" class="hidden">Next Question</button>
+        <button id="end-button">End Quiz</button>
+        <h4>Time Remaining: <span id=timer></span></h4>
+    </div>
+
+    <div id="end-content" class="hidden">
+        <h2></h2>
+        <p>Your final score is <span id="score"></span>/10.</p>
+        <label for="name">Enter your name: </label>
+        <input type="text" id="name-input">
+        <input type="submit" value="Submit" id="submit-button">
     </div>
 
     <div id="scores-content" class="hidden">
-
+        <h2>Saved Scores</h2>
+        <ul id="scores-list">
+        </ul>
+        <button id="clear-button">Clear Scores</button>
     </div>
 
     <script src="./assets/js/script.js"></script>

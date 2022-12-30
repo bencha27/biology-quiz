@@ -1,20 +1,30 @@
 Create homepage layout
-    Heading & instructions
-    Start button
-    High Scores button
+    ✅Content
+        ✅Header
+        ✅Heading & instructions
+        ✅Start button
+        ✅Scores button
+    Style
+        Header
+        Heading & instructions
+        Start button
+        Scores button
 Create quiz question layout
-    Render question with choices
-    Event listeners for choices
-    Validate response
-    Next question button
-    Render next question
+    ✅Render question with choices
+    ✅Event listeners for choices
+    ✅Validate response
+    ✅Next question button
+    ✅Render next question
+    Style question layout
 Create quiz end layout
-    Score and name input form
-    Calculate and display score
-    Store name and score in localStorage
+    ✅Score and name input form
+    ✅Calculate and display score
+    ✅Store name and score in localStorage
+    Style quiz end layout
 Create timer function
-    Set timer
-    End quiz when timer ends
-    *Pause timer between questions?
-Create high scores layout
-    Render name and score from localStorage
+    ✅Set timer
+    ✅End quiz when timer ends
+    ✅*Pause timer between questions?
+Create scores layout
+    ✅Render name and score from localStorage
+    Style scores layout
