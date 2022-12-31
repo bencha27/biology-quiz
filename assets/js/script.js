@@ -28,7 +28,7 @@ var clearButton = document.getElementById("clear-button");
 var number = 1;
 var questionIndexArray = [];
 var choiceIndexArray = [];
-var timeLeft = 90;
+var timeLeft = 60;
 var score = 0;
 var savedScores = [];
 
@@ -36,7 +36,8 @@ var savedScores = [];
 startButton.addEventListener("click", startQuiz);
 function startQuiz() {
     number = 1;
-    timeLeft = 90;
+    timeLeft = 60;
+    score = 0;
     questionIndexArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
     displayQuestion();
 }
@@ -54,7 +55,7 @@ function displayQuestion() {
         timeLeft--;
         timeDisplay.textContent = timeLeft;
 
-        if (timeLeft = 0) {
+        if (timeLeft === 0) {
             endQuiz();
         }
     }
@@ -142,6 +143,7 @@ function displayQuestion() {
         }
         scoreDisplay.textContent = score;
         homeButton.removeAttribute("class");
+        choicesEl.removeEventListener("click", checkAnswer);
     }
 }
 
@@ -186,7 +188,7 @@ function showScores() {
         for (i = 0; i < savedResults.length; i++) {
             var resultLi = document.createElement("li");
             var result = savedResults[i];
-            resultLi.textContent = result.name + ": " + result.score;
+            resultLi.textContent = result.name + ": " + result.score + "/10";
             scoresList.appendChild(resultLi);
         }
     }
@@ -203,6 +205,7 @@ function clearScores() {
 homeButton.addEventListener("click", home);
 function home() {
     introEl.removeAttribute("class");
+    homeButton.className = "hidden";
     questionEl.className = "hidden";
     endEl.className = "hidden";
     scoresEl.className = "hidden";
@@ -211,53 +214,53 @@ function home() {
 // Question bank
 var quizQuestions = [
     {
-        question: "Question 1",
-        choices: ["Choice A", "Choice B", "Choice C", "Choice D"],
-        answer: "Choice A"
+        question: "What supports the structure and organization of the cell?",
+        choices: ["Cytoskeleton", "Cell membrane", "Cytoplasm", "DNA"],
+        answer: "Cytoskeleton"
     }, 
     {
-        question: "Question 2",
-        choices: ["Choice A", "Choice B", "Choice C", "Choice D"],
-        answer: "Choice B"
+        question: "What makes proteins for the cell?",
+        choices: ["Ribosome", "DNA", "Cytoskeleton", "Nucleus"],
+        answer: "Ribosome"
     },
     {
-        question: "Question 3",
-        choices: ["Choice A", "Choice B", "Choice C", "Choice D"],
-        answer: "Choice C"
+        question: "The internal parts of the cell are embedded in the",
+        choices: ["cytoplasm", "cell membrane", "cytoskeleton", "nucleus"],
+        answer: "cytoplasm"
     },
     {
-        question: "Question 4",
-        choices: ["Choice A", "Choice B", "Choice C", "Choice D"],
-        answer: "Choice D"
+        question: "What controls things going in and out of the cell?",
+        choices: ["Cell membrane", "Cytoplasm", "Ribosome", "Nucleus"],
+        answer: "Cell membrane"
     },
     {
-        question: "Question 5",
-        choices: ["Choice A", "Choice B", "Choice C", "Choice D"],
-        answer: "Choice A"
+        question: "What organelle uses enzymes to break down large substances?",
+        choices: ["Lysosome", "Mitochondrion", "Chloroplast", "Endoplasmic reticulum"],
+        answer: "Lysosome"
     },
     {
-        question: "Question 6",
-        choices: ["Choice A", "Choice B", "Choice C", "Choice D"],
-        answer: "Choice B"
+        question: "What organelle transports materials within the cell?",
+        choices: ["Vesicle", "Golgi apparatus", "Vacuole", "Mitochondrion"],
+        answer: "Vesicle"
     },
     {
-        question: "Question 7",
-        choices: ["Choice A", "Choice B", "Choice C", "Choice D"],
-        answer: "Choice C"
+        question: "What organelle is involved in cell division?",
+        choices: ["Centrosome", "Chloroplast", "Lysosome", "Vacuole"],
+        answer: "Centrosome"
     },
     {
-        question: "Question 8",
-        choices: ["Choice A", "Choice B", "Choice C", "Choice D"],
-        answer: "Choice D"
+        question: "What organelle processes and packages proteins?",
+        choices: ["Golgi apparatus", "Endoplasmic reticulum", "Vesicle", "Lysosome"],
+        answer: "Golgi apparatus"
     },
     {
-        question: "Question 9",
-        choices: ["Choice A", "Choice B", "Choice C", "Choice D"],
-        answer: "Choice A"
+        question: "What organelle forms a rigid outer layer in plant cells?",
+        choices: ["Cell wall", "Cell membrane", "Chloroplast", "Cytoskeleton"],
+        answer: "Cell wall"
     },
     {
-        question: "Question 10",
-        choices: ["Choice A", "Choice B", "Choice C", "Choice D"],
-        answer: "Choice B"
+        question: "What organelle stores materials for the cell?",
+        choices: ["Vacuole", "Golgi apparatus", "Centrosome", "Ribosome"],
+        answer: "Vacuole"
     },
 ]
